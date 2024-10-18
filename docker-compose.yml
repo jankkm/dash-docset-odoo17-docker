@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  docset-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/app/output
+    command: ["/app/entrypoint.sh"]
